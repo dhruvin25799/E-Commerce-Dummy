@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    background-color: #E5E5E5;
+}
+
+.nav{
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+}
+
+.nav .nav-cta{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+}
+
+.main{
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.categories{
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "item item item item";
+    padding: 0 2rem;
+    gap: 1rem;
+}
+
+.cat-image p{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    text-align: center;
+}
+
+.cat-image{
+    position: relative;
+    max-width: 286px;
+    max-height: 140px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.banner{
+    padding: 0 2rem;
+}
+
+.banner .banner-img{
+    width: 100%;
+    height: auto;
+}
+
+.new-content{
+    padding: 0 2rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card{
+    background-color: #C4C4C4;
+    opacity: 70%;
+    display: flex;
+}
+
+.card-body{
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.footer{
+    padding: 3rem;
+    text-align: center;
+    background-color: white;
+}
+
+@media (max-width: 480px) {
+    *{
+        overflow-x: hidden;
+    }
+  .categories{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .new-content{
+      flex-flow: column;
+  }
+}

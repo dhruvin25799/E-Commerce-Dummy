@@ -1,0 +1,49 @@
+.login-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    gap: 1.5rem;
+    padding: 4rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.login-box .login-header{
+    text-align: center;
+}
+
+.login-box .login-input{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.input-control{
+    display: flex;
+    flex-flow: column;
+    gap: 0.2rem;
+}
+
+.input-control-row{
+    display: flex;
+    flex-flow: row;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.login-box .login-extra{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.login-box .login-wrong{
+    text-align: center;
+}

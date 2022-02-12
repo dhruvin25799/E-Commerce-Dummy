@@ -1,108 +1,181 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    display: grid;
-    background-color: #E5E5E5;
+body {
+  display: grid;
+  background-color: #e5e5e5;
 }
 
-.nav{
-    padding: 1.5rem 2rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
+.nav {
+  padding: 1.5rem 2rem;
+  display: flex;
+  background-color: white;
 }
 
-.nav .nav-cta{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1.5rem;
+.nav .menu{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main{
-    display: flex;
-    flex-flow: column;
-    gap: 2rem;
-    padding-top: 2rem;
+.nav .nav-brand {
+  font-weight: 900;
+  order: 1;
 }
 
-.categories{
-    display: grid;
-    justify-content: space-between;
-    grid-template-areas: "item item item item";
-    padding: 0 2rem;
-    gap: 1rem;
+.nav .nav-brand a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  gap: 10px;
+  align-items: center;
 }
 
-.cat-image p{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    background-color: white;
-    top: 50%;
-    text-align: center;
+.nav .nav-search {
+  margin: 0 10%;
+  width: 100%;
+  position: relative;
+  order: 2;
 }
 
-.cat-image{
-    position: relative;
-    max-width: 286px;
-    max-height: 140px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+.nav-search input {
+  padding: 10px 0;
+  padding-left: 30px;
+  padding-right: 10px;
+  width: 100%
 }
 
-.banner{
-    padding: 0 2rem;
+.nav-search label {
+  position: absolute;
+  top: 25%;
+  left: 5px;
 }
 
-.banner .banner-img{
-    width: 100%;
-    height: auto;
+.nav .nav-cta {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  gap: 1.5rem;
+  order: 3;
 }
 
-.new-content{
-    padding: 0 2rem;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 1rem;
+.nav-cta a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
-.card{
-    background-color: #C4C4C4;
-    opacity: 70%;
-    display: flex;
+.nav .nav-bars{
+  display: none;
 }
 
-.card-body{
-    padding: 2.5rem 1rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+.main {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding-top: 2rem;
 }
 
-.footer{
-    padding: 3rem;
-    text-align: center;
-    background-color: white;
+.categories {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas: "item item item item";
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.cat-image p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  text-align: center;
+}
+
+.cat-image {
+  position: relative;
+  max-width: 286px;
+  max-height: 140px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.banner {
+  padding: 0 2rem;
+}
+
+.banner .banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.new-content {
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #c4c4c4;
+  opacity: 70%;
+  display: flex;
+}
+
+.card-body {
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 3rem;
+  text-align: center;
+  background-color: white;
+}
+
+.btn {
+  box-shadow: 0px 2px 3px #595254;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  background-color: #c4c4c4
 }
 
 @media (max-width: 480px) {
-    *{
-        overflow-x: hidden;
-    }
-  .categories{
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
+  * {
+    overflow-x: hidden;
   }
-  .new-content{
-      flex-flow: column;
+  .nav .nav-search{
+    display: none;
+  }
+  .nav .nav-cta{
+    display: none;
+  }
+  .nav .nav-bars{
+    display: block;
+    order: 2;
+  }
+  .categories {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .new-content {
+    flex-flow: column;
   }
 }

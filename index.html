@@ -14,13 +14,25 @@
   <body>
     <header>
       <nav class="nav">
-        <div class="nav-brand"><a>My Website</a></div>
-        <div class="nav-search"><input type="text" /></div>
-        <div class="nav-cta">
-          <button>Login</button>
-          <a><i class="fa-regular fa-bookmark"></i></a>
-          <a><i class="fa-solid fa-cart-shopping"></i>Cart</a>
-        </div>
+        <ul class="menu">
+          <li class="nav-brand">
+              <a href=""><i class="fa-solid fa-shop fa-2x"></i>My Website</a>
+          </li>
+          <li class="nav-search">
+              <label for=""><i class="fa-brands fa-searchengin"></i></label>
+              <input type="text" placeholder="Search" />
+          </li>
+          <li class="nav-cta">
+              <button class="btn">Login</button>
+              <a href="./wishlist_page.html"
+                ><i class="fa-regular fa-bookmark"></i>Wishlist</a
+              >
+              <a href="./cart_page.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Cart</a
+              >
+          </li>
+          <li class="nav-bars"><i class="fa-solid fa-bars fa-2x"></i></li>
+        </ul>
       </nav>
     </header>
     <main class="main">
@@ -44,7 +56,12 @@
       </section>
       <section class="banner">
         <div>
-          <img class="banner-img" src="./static/images/home_banner.jpg" alt="" srcset="" />
+          <img
+            class="banner-img"
+            src="./static/images/home_banner.jpg"
+            alt=""
+            srcset=""
+          />
         </div>
       </section>
       <section class="new-content">

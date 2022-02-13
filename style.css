@@ -11,13 +11,23 @@
 
 body {
   display: grid;
-  background-color: white
+  background-color: white;
 }
 
 .nav {
   padding: 1.5rem 2rem;
   display: flex;
   background-color: white;
+}
+
+.nav a{
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 1.3rem
+}
+
+.nav a:hover{
+  color: var(--COLOR-primary-green);
 }
 
 .nav .menu{
@@ -35,11 +45,17 @@ body {
 }
 
 .nav .nav-brand a {
+  font-size: 1.5rem;
+  font-weight: 900;
   display: flex;
   text-decoration: none;
   color: black;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+}
+.nav .nav-brand a:hover{
+  color: var(--COLOR-primary-green);
 }
 
 .nav .nav-search {
@@ -53,12 +69,17 @@ body {
   padding: 10px 0;
   padding-left: 30px;
   padding-right: 10px;
-  width: 100%
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.nav-search input:active{
+  border-color: var(--COLOR-primary-green);
 }
 
 .nav-search label {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 5px;
 }
 

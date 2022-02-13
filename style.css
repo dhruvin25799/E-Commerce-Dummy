@@ -1,3 +1,9 @@
+:root{
+  --COLOR-primary-green: #114639;
+  --COLOR-card-green: #e2ede9;
+  --COLOR-secondary-text: #777777;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +11,7 @@
 
 body {
   display: grid;
-  background-color: #e5e5e5;
+  background-color: white
 }
 
 .nav {
@@ -80,12 +86,13 @@ body {
   flex-flow: column;
   gap: 2rem;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .categories {
   display: grid;
   justify-content: space-between;
-  grid-template-areas: "item item item item";
+  grid-template-areas: "item item";
   padding: 0 2rem;
   gap: 1rem;
 }
@@ -102,7 +109,7 @@ body {
 
 .cat-image {
   position: relative;
-  max-width: 286px;
+  max-width: 50%;
   max-height: 140px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -110,12 +117,22 @@ body {
 
 .banner {
   padding: 0 2rem;
+  position: relative;
 }
 
-.banner .banner-img {
-  width: 100%;
-  height: auto;
+.banner-text{
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  font-size: 2.5rem;
 }
+
+.banner h1{
+  text-align: center;
+  color: #114639;
+}
+
 
 .new-content {
   padding: 0 2rem;
@@ -126,16 +143,36 @@ body {
 }
 
 .card {
-  background-color: #c4c4c4;
-  opacity: 70%;
   display: flex;
+  flex: 1 1 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e2ede9;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
+.card .card-image{
+  flex: 1 1 50%;
+}
+
+.card .card-image img{
+  vertical-align: middle;
+}
+
+
 .card-body {
-  padding: 2.5rem 1rem;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex: 1 1 50%;
+  padding: 0 1rem;
+  color: var(--COLOR-secondary-text);
+}
+
+.card .card-header{
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--COLOR-primary-green);
 }
 
 .footer {
@@ -155,9 +192,31 @@ body {
   background-color: #c4c4c4
 }
 
+.resp-image{
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 750px) {
+  .banner-text{
+    width: 50%;
+    font-size: 1rem;
+    left: 25%;
+  }
+  .card .card-body .card-content{
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   * {
-    overflow-x: hidden;
+  }
+  .banner-text{
+    width: 50%;
+    font-size: 1rem;
+    left: 25%;
+  }
+  .card .card-body .card-content{
+    display: none;
   }
   .nav .nav-search{
     display: none;
@@ -170,12 +229,13 @@ body {
     order: 2;
   }
   .categories {
-    display: flex;
-    flex-flow: column wrap;
+    display: grid;
+    grid-template-areas: "item item";
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
   }
   .new-content {
-    flex-flow: column;
+    flex-flow: column nowrap;
   }
 }
